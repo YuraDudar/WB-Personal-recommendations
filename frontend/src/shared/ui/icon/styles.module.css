@@ -1,0 +1,23 @@
+.root {
+}
+
+/* sizes */
+.xs {
+    height: 1.5rem;
+    width: auto;
+}
+
+.s {
+    height: 2rem;
+    width: auto;
+}
+
+.m {
+    height: 4rem;
+    width: auto;
+}
+
+.l {
+    height: 8rem;
+    width: auto;
+}
