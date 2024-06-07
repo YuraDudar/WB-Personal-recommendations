@@ -1,0 +1,34 @@
+POST http://localhost:8080/user/add
+Content-Type: application/json
+
+{
+  "uid": 14254751,
+  "fullName": "Иванов Иван Иванович",
+  "gender": "М",
+  "birthdate": "1990-01-01",
+  "lastOnline": "2024-06-07T10:00:00",
+  "averageTime": 1479,
+  "region": "Москва",
+  "device": "Android"
+}
+
+###
+DELETE http://localhost:8080/user/delete/14254750
+
+###
+PUT http://localhost:8080/user/update
+Content-Type: application/json
+
+{
+  "uid": 14254750,
+  "fullName": "Иванов Иван Иванович",
+  "gender": "М",
+  "birthdate": "2000-01-01",
+  "lastOnline": "2024-06-07T10:00:00",
+  "averageTime": 1480,
+  "region": "Москва",
+  "device": "Android"
+}
+
+###
+GET http://localhost:8080/user/get/14254751
