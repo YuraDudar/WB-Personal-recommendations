@@ -1,26 +1,32 @@
+import Dashboard from './components/Dashboard';
+import dataProvider from '../../api/dataProvider';
+import theme from './styles';
+import UserIcon from '@mui/icons-material/Group';
+import { authProvider } from '../../api/authProvider';
+import { UserCreate, UserEdit, UserList } from '../userEntity';
 import {
   Admin,
   Resource,
-  ShowGuesser,
 } from "react-admin";
-import { dataProvider } from "../../api/dataProvider";
-import UserIcon from '@mui/icons-material/Group';
-import { Dashboard } from "./components/Dashboard/Dashboard";
-import { UserList } from "./components/UserList/UserList";
-import { authProvider } from "../../api/authProvider";
   
   export const AdminPage = () => (
     <Admin
-    authProvider={authProvider}
+      theme={theme}
+      authProvider={authProvider}
       dataProvider={dataProvider}
       dashboard={Dashboard}
     >
       <Resource
         name="users"
         list={UserList}
-        show={ShowGuesser}
+        create={UserCreate}
+        edit={UserEdit}
         icon={UserIcon}
-        recordRepresentation="name"
+      />
+      <Resource
+        name="recomendations"
+        list={UserList}
+        icon={UserIcon}
       />
     </Admin>
   );

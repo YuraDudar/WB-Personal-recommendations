@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@mui/material';
 import { List, SimpleList, Datagrid, TextField, EmailField } from 'react-admin';
 
-export const UserList = () => {
+const RecomendationList = () => {
     const isSmall = useMediaQuery<any>(theme => theme.breakpoints.down('sm'));
     return (
         <List>
@@ -21,5 +21,7 @@ export const UserList = () => {
                 </Datagrid>
             )}
         </List>
-    );
+    )
 };
+
+export default RecomendationList;
